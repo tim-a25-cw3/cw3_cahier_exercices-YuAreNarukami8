@@ -1,0 +1,33 @@
+.header {
+    padding: 25px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+a {
+    color: var(--color-white);
+    &:hover,
+    &.active {
+        color: var(--color-primary);
+    }
+}
+.logo {
+    margin: 0;
+    color: var(--color-white);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}

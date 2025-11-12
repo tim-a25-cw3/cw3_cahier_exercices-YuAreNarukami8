@@ -1,0 +1,47 @@
+.cards {
+    @media (width<= $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+    @media (width<= $breakpoint-md) {
+        display: block;
+    }
+}
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    align-items: center;
+    @media (width<= $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+    &:nth-child(even) {
+        .card__content {
+            order: -1;
+        }
+    }
+    @media (width<= $breakpoint-md) {
+        display: block;
+        &:nth-child(even) {
+            .card__content {
+                order: unset;
+            }
+        }
+    }
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        color: var(--color-white);
+    }
+    .card__media {
+        aspect-ratio: 595/490;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
